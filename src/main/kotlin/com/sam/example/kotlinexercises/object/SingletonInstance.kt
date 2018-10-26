@@ -15,3 +15,15 @@ object SingletonInstance {
     fun decrement() = --count
 
 }
+
+fun main(args:Array<String>){
+    SingletonInstance.currentCount() //instance burada olusuyor.(Object tiplerde instance model'e ilk erisim aninda olusur)
+    SingletonInstance.increment()
+    SingletonInstance.increment()
+    SingletonInstance.increment()
+    println("current should be 3 = ${SingletonInstance.currentCount()}")
+
+    SingletonInstance.decrement()
+    SingletonInstance.decrement()
+    println("current should be 1 = ${SingletonInstance.currentCount()}")
+}
