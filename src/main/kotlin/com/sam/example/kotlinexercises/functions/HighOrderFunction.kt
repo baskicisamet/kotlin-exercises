@@ -12,6 +12,7 @@ class HighOrderFunction {
 
     //Collection lar icin kullanilacak bir method tanimliyoruz.
     //method 2 adet parametre aliyor, 1.parametreyi initial data olarak kullanicak, '2.parametrede de fonksiyon aliyor,bu fonksiyona collectiondaki datalari topluyacak. ve initial datanin tipinde bir data  döndürecek.
+    //Bu fonksiyonlara extention fonksiyonlar denir. (Collection için olusturulmus ilave bir fonksiyondur.)
     fun <T, R> Collection<T>.fold(initial: R, combine: (acc: R, nextElement: T) -> R): R { //Bu method iki adet paramtre aliyor.
         var accumulator: R = initial
         for (element: T in this) {
